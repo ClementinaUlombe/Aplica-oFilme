@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import MovieCard from "../components/MovieCard";
 
-import "./MovieGrid.css"
+import "./Search.css"; // Certifique-se que o caminho do CSS está correto
+import "./media_query.css"; // responcive
 
 const apiKey = "96322c26eca3c457263bb90f67eb5206"; // Sua chave de API do TMDb
 const searchURL = "https://api.themoviedb.org/3/search/movie";
@@ -32,11 +33,16 @@ const Search = () => {
     }, [query]);
 
     return (
-        <div>
-            {/* Exibir os resultados da pesquisa aqui */}
-            {movies.map(movie => (
-                <MovieCard key={movie.id} movie={movie} />
-            ))}
+        <div className="container">
+            <h2 className="title">
+                Resultados Para: <span className="query-text">{query}</span>
+            </h2>
+            <div className="movies-container">
+                {movies.length === 0 && <p>Carregando...</p>}
+                {movies.length > 0 && movies.map(movie => (
+                    <MovieCard key={movie.id} movie={movie} />
+                ))}
+            </div>
         </div>
     );
 };

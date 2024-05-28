@@ -1,12 +1,12 @@
+/* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
 import { FaStar } from 'react-icons/fa';
 
 const imageUrl = import.meta.env.VITE_IMG;
 
 const MovieCard = ({ movie, showLink = true }) => {
-    console.log('URL da imagem:', `${imageUrl}${movie.poster_path}`);
     return (
-        <div className="movie-card">
+        <div>
             <img src={`${imageUrl}${movie.poster_path}`} alt={movie.title} />
             <h2>{movie.title}</h2>
             <p>

@@ -1,0 +1,84 @@
+.movie-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    color: #fff;
+    background-color: #111;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.movie-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3.55rem;
+}
+
+.movie-image {
+    flex: 1 1 40%;
+    max-width: 40%;
+}
+
+.movie-info {
+    flex: 1 1 55%;
+    max-width: 55%;
+}
+
+.movie-page .tagline {
+    font-size: 1.5rem;
+    color: #f7d354;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.movie-page .info, .movie-page .description {
+    background-color: #222;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+.description{
+
+    margin-top: 17.5rem;
+}
+.duracao{
+
+    margin-top: 15rem;
+}
+
+.movie-page .info h3, .movie-page .description h3 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.movie-page .info p, .movie-page .description p {
+    margin: 0;
+}
+
+.movie-page .info h3 svg, .movie-page .description h3 svg {
+    margin-right: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .movie-details {
+        flex-direction: column;
+    }
+
+    .movie-image, .movie-info {
+        max-width: 100%;
+    }
+
+    .movie-page {
+        padding: 1rem;
+    }
+
+    .movie-page .tagline {
+        font-size: 1.2rem;
+    }
+
+    .movie-page .info, .movie-page .description {
+        padding: 0.5rem;
+    }
+}
+

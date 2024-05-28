@@ -6,7 +6,7 @@
 }
 
 .title .query-text {
-    color: #f7d354;
+    color: blue;
 }
 
 .movies-container{
@@ -40,7 +40,7 @@
 }
 
 .movies-container div svg {
-    color: #f7d354;
+    color: blue;
 
 }
 
