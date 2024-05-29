@@ -2,10 +2,10 @@ import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import MovieCard from "../components/MovieCard";
 
-import "./Search.css"; // Certifique-se que o caminho do CSS está correto
-import "./media_query.css"; // responcive
+import "./Search.css"; 
+import "./media_query.css"; 
 
-const apiKey = "96322c26eca3c457263bb90f67eb5206"; // Sua chave de API do TMDb
+const apiKey = "96322c26eca3c457263bb90f67eb5206"; 
 const searchURL = "https://api.themoviedb.org/3/search/movie";
 
 const Search = () => {
@@ -30,6 +30,7 @@ const Search = () => {
         if (query) {
             fetchSearchedMovies();
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [query]);
 
     return (
